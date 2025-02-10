@@ -37,7 +37,7 @@ export default function Hero() {
                     scale={1.4}
                     threshold={0.2}
                 >
-                    <h2 className='md:text-7xl sm:text-6xl text-5xl mb-10 px-10 text-start font-regular p-0 mt-[-10px]'>
+                    <h2 className='md:text-7xl sm:text-6xl text-6xl mb-10 px-10 text-start font-regular p-0 mt-[-10px]'>
                         Fueling Young Minds, <br />Building <span className='font-medium text-primary'>Bright</span> <br />Futures!
                     </h2>
                 </AnimatedContent>
