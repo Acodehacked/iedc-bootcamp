@@ -12,7 +12,7 @@ export const useDimensions = (ref:React.RefObject<HTMLElement|null>) => {
       dimensions.current.width = ref.current.offsetWidth;
       dimensions.current.height = ref.current.offsetHeight;
     }
-  }, []);
+  }, [ref]);
 
   return dimensions.current;
 };

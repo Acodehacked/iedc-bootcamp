@@ -56,7 +56,7 @@ export default function Hero() {
                 <FadeContent>
                     <Link href={'/'} className='bg-black group flex items-center justify-between w-auto rounded-r-full ps-10 pe-3 py-3 mt-3 text-white'>
                         <span className='text-3xl group-hover:tracking-widest transition-all tracking-wider'>JOIN NOW!</span>
-                        <span className='bg-primary ms-20 rounded-full px-4'><Image className='w-[40]' src={'/arrowwhite.png'} width={600} height={600} alt='' /> </span>
+                        <span className='bg-primary ms-20 rounded-full px-4'><Image className='w-[40px]' src={'/arrowwhite.png'} width={600} height={600} alt='' /> </span>
                     </Link>
                 </FadeContent>
 
