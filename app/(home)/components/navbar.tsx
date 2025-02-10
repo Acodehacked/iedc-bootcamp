@@ -53,7 +53,7 @@ const Navbar = () => {
                 {isOpen && <motion.nav
                     exit={'closed'}
                     initial={'closed'}
-                    className=' w-full overflow-hidden bg-white fixed left-0 z-[999] bottom-0 h-full  container '
+                    className=' w-full overflow-hidden bg-white fixed left-0 z-[999] bottom-0 h-full   '
                     animate={'open'}
                     variants={sidebar}
                     ref={containerRef}

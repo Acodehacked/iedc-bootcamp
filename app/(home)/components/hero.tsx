@@ -11,7 +11,7 @@ const handleAnimationComplete = () => {
 };
 
 export default function Hero() {
-    return <section className="hero">
+    return <section className="hero bg-white">
         <div className="main relative overflow-hidden min-h-[100vh] flex screen flex-col justify-center">
             <span className='absolute z-[3] w-[90px] border-l-[0.01rem] border-zinc-300 right-0 top-0 bottom-0'></span>
             <div className="flex flex-col items-start absolute z-[2]">
