@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local';
+import Template from "./template";
 
 
 const myFont = localFont({ src: './font/ClashDisplay-Variable.woff2' })
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body
         className={`${myFont.className} light`}
       >
-        {children}
+        <Template>
+          {children}
+        </Template>
       </body>
     </html>
   );
