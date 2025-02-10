@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { Cycle, motion } from "framer-motion";
 import Link from "next/link";
 import Dot from "../(home)/components/dot";
 
@@ -24,15 +24,15 @@ const variants = {
 const Links = [
   {
     title: 'Home',
-    link: '/'
+    link: '#'
   },
   {
     title: 'EXECOM',
-    link: '/'
+    link: '#execom'
   },
   {
     title: 'SUMMIT 2022',
-    link: '/'
+    link: '/#summit'
   },
   {
     title: 'CONTACT',
@@ -43,7 +43,7 @@ const Links = [
     link: '/'
   }
 ]
-export const MenuItem = ({ i }: { i: number }) => {
+export const MenuItem = ({ i ,toggleon}: { i: number, toggleon: Cycle}) => {
   // const style = { border: `1px solid rgba(0,0,0,0.2)` };
   return (
     <motion.li
@@ -54,11 +54,11 @@ export const MenuItem = ({ i }: { i: number }) => {
         stiffness:1,
       }}
       whileHover={{ x:20 }}
-      className="hover:border-b-[0.01rem]
+      className="hover:border-b-[0.01rem] w-full
       border-b-[0.01rem] hover:border-zinc-400 border-zinc-200 sm:mt-3 mt-6"
     >
       {/* <div className="icon-placeholder" style={style} /> */}
-      <Link href={'/'} className=" text-black md:text-7xl text-5xl mb-5">
+      <Link onClick={()=>toggleon()} href={Links[i].link} className=" text-black w-full md:text-7xl text-5xl mb-5">
         <span className="inline-flex items-end gap-2">
         {Links[i].title}<Dot />
         </span>

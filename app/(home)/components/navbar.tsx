@@ -65,7 +65,7 @@ const Navbar = () => {
                                 <span className='text-4xl sm:flex hidden '>Close</span> <X size={40} />
                             </button>
                         </div>
-                        <Navigation />
+                        <Navigation  toggle={toggleOpen} />
                         <div className="follow">
                             <h2>Follow us on</h2>
                             <div className="flex text-secondary-foreground/30 text-4xl gap-5 mt-3">
