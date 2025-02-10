@@ -11,6 +11,40 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+  height: 10px;
+  /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Track color */
+  border-radius: 0px;
+  /* Rounded track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Scrollbar color */
+  border-radius: 10px;
+  /* Rounded edges */
+  border: 2px solid #f1f1f1;
+  /* Space around scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Darker color on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
 
 @layer base {
   .screen {
@@ -77,18 +111,28 @@ body {
     @apply bg-black text-foreground;
   }
 
-  .logo-icon{
-    @apply hover:text-primary ;
+  .logo-icon {
+    @apply hover:text-primary;
   }
 }
+
 @keyframes smooth-wiggle {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(0.3deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0.3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .wiggle {
   display: inline-block;
-  transform-origin: left center; /* Anchors the rotation to the left side */
+  transform-origin: left center;
+  /* Anchors the rotation to the left side */
   animation: smooth-wiggle 3s infinite ease-in-out;
 }

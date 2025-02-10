@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Dot from "../(home)/components/dot";
 
 const variants = {
   open: {
@@ -59,7 +60,7 @@ export const MenuItem = ({ i }: { i: number }) => {
       {/* <div className="icon-placeholder" style={style} /> */}
       <Link href={'/'} className=" text-black md:text-7xl text-5xl mb-5">
         <span className="inline-flex items-end gap-2">
-        {Links[i].title}<span className="w-[20px] h-[20px] mb-3 bg-primary relative rounded-full"></span>
+        {Links[i].title}<Dot />
         </span>
       </Link>
       {/* <HyperText>Hover Me!</HyperText>; */}

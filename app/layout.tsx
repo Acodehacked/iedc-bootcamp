@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${myFont.className} light`}
+        className={`${myFont.className} light overflow-x-hidden`}
       >
         <Template>
           {children}

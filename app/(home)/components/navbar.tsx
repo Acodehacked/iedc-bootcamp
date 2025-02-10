@@ -42,7 +42,7 @@ const Navbar = () => {
     return (
         <nav className='flex p-0 border-b-[0.01rem] border-zinc-200 justify-between fixed left-0 right-0 top-0 z-[999] bg-white items-center screen'>
             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                <Image className='md:w-[270px] sm:w-[240px] w-[190px] ps-10' src={'/logo.png'} alt='logo' width={800} height={800} />
+                <Image className='md:w-[280px] sm:w-[240px] w-[190px] ps-10' src={'/logo.png'} alt='logo' width={800} height={800} />
             </FadeContent>
             <div className='flex items-center'>
                 <Link className="border-r-[0.01rem] hover:bg-zinc-100 flex items-center px-10 h-[90px]" href={'https://iedc-admin.vercel.app/'}>LOGIN</Link>
@@ -71,10 +71,10 @@ const Navbar = () => {
                             <div className="flex text-secondary-foreground/30 text-4xl gap-5 mt-3">
                                 <BsLinkedin className='logo-icon' />
                                 <BsInstagram className='logo-icon' />
-                                <FaXTwitter  className='logo-icon'/>
-                                <BsFacebook className='logo-icon'/>
-                                <BsDiscord className='logo-icon'/>
-                                <BsYoutube className='logo-icon'/>
+                                <FaXTwitter className='logo-icon' />
+                                <BsFacebook className='logo-icon' />
+                                <BsDiscord className='logo-icon' />
+                                <BsYoutube className='logo-icon' />
                             </div>
                         </div>
                     </div>
