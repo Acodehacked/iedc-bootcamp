@@ -22,6 +22,7 @@ export default function RootLayout({
       <body
         className={`${myFont.className} light overflow-x-hidden`}
       >
+        
         <Template>
           {children}
         </Template>

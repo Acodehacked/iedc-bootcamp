@@ -3,7 +3,7 @@ import React from 'react'
 
 const Execom = () => {
   return (
-    <div className="bg-white py-5">
+    <div className="bg-white py-5" id='execom'>
       <div className='screen sm:px-10 px-5'>
         <h4 className='text-6xl text-black'><span className='font-semibold text-primary'>IEDC</span> EXECOM</h4>
       </div>

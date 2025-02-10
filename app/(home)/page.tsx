@@ -9,6 +9,7 @@ import Summit from "./components/summit";
 import Execom from "./components/execom";
 import { Timeline } from "../components/Timeline";
 import TimelinePage from "./components/timeline";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Summit />
       <Execom />
       <TimelinePage />
+      <Footer />
     </main>
   );
 }

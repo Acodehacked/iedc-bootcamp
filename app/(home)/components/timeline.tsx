@@ -81,8 +81,8 @@ const TimelinePage = () => {
     ];
     return (
         <div className="bg-white">
-            <div className="screen overflow-y-hidden">
-                <div className="px-5 pt-10">
+            <div className="screen overflow-y-hidden pb-[40px]">
+                <div className="px-10 pt-10">
                     <h4 className='text-6xl text-black'><span className='font-semibold text-primary'>BOOTCAMP</span> REWIND</h4>
                 </div>
                 <Timeline data={data} />

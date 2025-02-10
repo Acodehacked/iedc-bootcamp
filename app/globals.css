@@ -114,6 +114,12 @@ body {
   .logo-icon {
     @apply hover:text-primary;
   }
+  .footer-link{
+    @apply flex gap-2 items-center;
+  }
+  .footer-link img{
+    @apply w-[20px] opacity-0 ;
+  }
 }
 
 @keyframes smooth-wiggle {

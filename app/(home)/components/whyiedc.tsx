@@ -33,7 +33,7 @@ const data = [
 ]
 const WhyIedc = () => {
     return (
-        <div className="bg-white pt-20 pb-20 rounded-b-[65px]">
+        <div id='whyiedc' className="bg-white pt-20 pb-20 rounded-b-[65px]">
             <section className="min-h-[70vh] pt-20 screen px-10 mt-10 border-t-[0.05rem] rounded-[95px] border-zinc-400 bg-white">
                 <h1 className="w-full text-center text-6xl">WHY <span className="text-primary font-semibold">IEDC</span>?</h1>
                 <TextGenerateEffect duration={1} className="font-medium text-center text-md" words="Here students take their first step as innovators and entrepreneurs" />

@@ -3,7 +3,7 @@ import Dot from './dot'
 
 const About = () => {
     return (
-        <div className='flex py-20 flex-col screen px-10 '>
+        <div className='flex py-20 flex-col screen px-10 ' id='about'>
             <div className="main flex flex-col">
                 <span className='text-primary font-semibold text-xl'>ABOUT</span>
                 <span className='text-6xl text-white'>SJCET BOOTCAMP - IEDC</span>

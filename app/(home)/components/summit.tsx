@@ -3,7 +3,7 @@ import React from 'react'
 
 const Summit = () => {
     return (
-        <div className='w-full bg-white px-5 pb-20'>
+        <div className='w-full bg-white px-5 pb-20' id='summit'>
             <div className="screen bg-black rounded-[45px] overflow-hidden w-full p-0">
                 <div className="flex sm:flex-row flex-col items-center md:px-10 px-3 pt-10 justify-between ">
                     <h2 className='text-white py-3  text-6xl'>SUMMIT 2022</h2>
