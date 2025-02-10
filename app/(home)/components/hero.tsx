@@ -2,7 +2,6 @@
 import AnimatedContent from '@/app/components/AnimatedContent';
 import FadeContent from '@/app/components/FadeContent';
 import SplitText from '@/app/components/SplitText';
-import TextPressure from '@/app/components/TextPressure';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

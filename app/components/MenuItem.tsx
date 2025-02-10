@@ -1,6 +1,5 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { HyperText } from "@/components/magicui/hyper-text";
 import Link from "next/link";
 
 const variants = {
@@ -20,7 +19,7 @@ const variants = {
   }
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+// const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 const Links = [
   {
     title: 'Home',
@@ -44,7 +43,7 @@ const Links = [
   }
 ]
 export const MenuItem = ({ i }: { i: number }) => {
-  const style = { border: `1px solid rgba(0,0,0,0.2)` };
+  // const style = { border: `1px solid rgba(0,0,0,0.2)` };
   return (
     <motion.li
       variants={variants}

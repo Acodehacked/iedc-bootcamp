@@ -33,7 +33,7 @@ const Navbar = () => {
     };
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
-    const { height } = useDimensions(containerRef);
+    // const { height } = useDimensions(containerRef);
 
     useEffect(() => {
         console.log(isOpen)

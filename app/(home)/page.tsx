@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Hero from "./components/hero";
-import Link from "next/link";
 import Navbar from "./components/navbar";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { TextGenerateEffect } from "../components/TextGenerateEffect";
