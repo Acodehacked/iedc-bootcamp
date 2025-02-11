@@ -10,6 +10,7 @@ import Execom from "./components/execom";
 import { Timeline } from "../components/Timeline";
 import TimelinePage from "./components/timeline";
 import Footer from "./components/footer";
+import EventsHome from "./components/events";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <WhyIedc />
       <About />
       <Partners />
+      <EventsHome />
       <Summit />
       <Execom />
       <TimelinePage />

@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const sidebar = {
         open: (height = 1000) => ({
-            clipPath: `circle(${height * 2 + 200}px at 100% 0px)`,
+            clipPath: `circle(${height * 3 + 200}px at 100% 0px)`,
             transition: {
                 type: "spring",
                 stiffness: 20,
