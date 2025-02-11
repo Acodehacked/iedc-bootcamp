@@ -41,7 +41,7 @@ const WhyIedc = () => {
                 <TextGenerateEffect duration={1} className="font-medium text-center text-md" words="Here students take their first step as innovators and entrepreneurs" />
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-4 sm:grid-cols-2 mt-10">
                     {data.map((item, index) => {
-                        return <motion.div className='border-[0.01rem] z-[10] flex flex-col items-start rounded-[45px] p-5 hover:border-zinc-300 border-zinc-200' >
+                        return <motion.div key={index} className='border-[0.01rem] z-[10] flex flex-col items-start rounded-[45px] p-5 hover:border-zinc-300 border-zinc-200' >
                             <span className='text-slate-700 py-6'>{item.icon}</span>
                             <h3 className='font-medium text-2xl'>{item.title}</h3>
                             <h3 className='font-regular text-md'>{item.desc}</h3>

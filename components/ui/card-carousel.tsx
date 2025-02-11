@@ -15,9 +15,12 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/app/hooks/use-outside-click";
+import { EVENTS } from "@/constants";
+import EventCard from "@/app/(home)/components/event";
+import { X } from "lucide-react";
+import Link from "next/link";
 
 interface CarouselProps {
-    items: JSX.Element[];
     initialScroll?: number;
 }
 
@@ -36,12 +39,12 @@ export const CarouselContext = createContext<{
     currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+export const Carousel = ({ initialScroll = 0 }: CarouselProps) => {
     const carouselRef = React.useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = React.useState(false);
     const [canScrollRight, setCanScrollRight] = React.useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const [modelvisible, setmodelvisible] = useState(-1)
     useEffect(() => {
         if (carouselRef.current) {
             carouselRef.current.scrollLeft = initialScroll;
@@ -86,6 +89,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         return window && window.innerWidth < 768;
     };
 
+
     return (
         <CarouselContext.Provider
             value={{ onCardClose: handleCardClose, currentIndex }}
@@ -108,7 +112,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                             "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
                         )}
                     >
-                        {items.map((item, index) => (
+                        {EVENTS.map((item, index) => (
                             <motion.div
                                 initial={{
                                     opacity: 0,
@@ -127,7 +131,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                                 key={"card" + index}
                                 className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
                             >
-                                {item}
+                                <EventCard onclick={() => setmodelvisible(index)} event={item} />
                             </motion.div>
                         ))}
                     </div>
@@ -149,6 +153,36 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     </button>
                 </div>
             </div>
+            <AnimatePresence>
+                {modelvisible != -1 && <motion.div
+                    transition={{
+                        duration: 0.4,
+                        stiffness: 1
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed top-0 right-0 bottom-0 z-[999] left-0 shadow-2xl gap-3 p-4  bg-white">
+                    <div className="flex max-w-[1000px] w-full mx-auto justify-between items-center mb-4 p-3">
+                        <span className="text-4xl">{EVENTS[modelvisible].title}</span>
+                        <div onClick={() => setmodelvisible(-1)} className="px-4 py-3">
+                            <X size={40} />
+                        </div>
+                    </div>
+                    <div className="container flex md:flex-row flex-col max-w-[1000px] w-full mx-auto items-start">
+                        <Image src={EVENTS[modelvisible].image} className="md:h-[500px] md:flex hidden md:w-[40%] w-[200px] rounded-xl overflow-hidden" alt="" width={1000} height={1000} />
+                        <div className="flex flex-col items-start md:w-[60%] md:min-w-[350px] p-5">
+                            <p className="text-xl font-regular">{EVENTS[modelvisible].description}</p>
+                            <span className="text-xl mt-4">Date : {EVENTS[modelvisible].eventDate}</span>
+                            <span className="text-xl mt-4">Venue : {EVENTS[modelvisible].Venue}</span>
+                            <div className="flex gap-3 mt-2">
+                                <div className="px-5 py-3 rounded-full border-[0.06rem] border-zinc-500">{EVENTS[modelvisible].status ? "OPEN NOW" : "EXPIRED"}</div>
+                                <Link href={EVENTS[modelvisible].url} className="px-5 py-3 rounded-full text-white bg-primary">VISIT LINK</Link>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>}
+            </AnimatePresence>
         </CarouselContext.Provider>
     );
 };
@@ -166,11 +200,11 @@ export const CardCarous = ({
     const containerRef = useRef<HTMLDivElement>(null);
     const { onCardClose, currentIndex } = useContext(CarouselContext);
 
-    
+
 
     return (
         <>
-           
+
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
