@@ -5,6 +5,7 @@ import SplitText from '@/app/components/SplitText';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import HeroAnimation from './animation';
 
 const handleAnimationComplete = () => {
     console.log('All letters have animated!');
@@ -61,7 +62,8 @@ export default function Hero() {
                 </FadeContent>
 
             </div>
-            <Image className='absolute z-[1] pt-[150px] wiggle' src={'/airplane.png'} alt='' height={2000} width={2000} />
+            {/* <Image className='absolute z-[1] pt-[150px] wiggle' src={'/airplane.png'} alt='' height={3000} width={4000} /> */}
+            <HeroAnimation />
         </div>
     </section>
 }
